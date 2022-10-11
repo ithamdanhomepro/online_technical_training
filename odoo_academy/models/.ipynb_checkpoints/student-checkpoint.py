@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
-class Student(model.Model):
+class Student(models.Model):
     
     _name: 'academy.student'
     _order = "id desc"
