@@ -2,8 +2,10 @@
 
 from odoo import models, fields, api
 
-class Course(models.Model):
+class Book(models.Model):
     
-    _name = 'academy.course'
-    _description = 'Course Info'
+    _name = 'academy.book'
+    _description = 'Book Info'
     
+    name =fields.Char(string='Title', required=True)
+    description = fields.Text(string='Description')
