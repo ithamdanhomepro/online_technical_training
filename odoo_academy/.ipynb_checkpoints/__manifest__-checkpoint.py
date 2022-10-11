@@ -17,7 +17,7 @@
      'website': 'http://www.odoo.dom',
      
      'category': 'Training',
-     'version' : '0.1',
+     'version' : '0.2',
      
      'depends': ['base'],
      
@@ -27,7 +27,7 @@
      ],
      
      'demo': [
-       
-         
+
      ],
+
 }
