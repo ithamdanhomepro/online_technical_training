@@ -22,7 +22,8 @@
      'depends': ['base'],
      
      'data': [
-        
+        'security/academy_secudity.xml',
+         'security/ir.model.access.csv'        
      ],
      
      'demo': [
