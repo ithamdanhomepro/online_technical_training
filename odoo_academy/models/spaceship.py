@@ -18,6 +18,6 @@ class Spaceship(models.Model):
                                         ('huge', 'Huge')])
     
     no_passengers = fields.Integer(string='No of Passengers', default=100)
-    #ship_status = fields.Boolean(string='Active', default=True, tracking=True)
+    ship_status = fields.Boolean(string='Active', default=True, tracking=True)
     
     
