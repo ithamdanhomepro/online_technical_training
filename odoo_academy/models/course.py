@@ -16,5 +16,5 @@ class Course(models.Model):
                                         ('advanced', 'Advanced')],
                             copy=False)
         
-    ship_active = fields.Boolean(string='Active', default=True)
+    active = fields.Boolean(string='Active', default=True)
     
