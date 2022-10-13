@@ -16,7 +16,7 @@
                             <group>
                                 <firld name="base_price"/>
                                 <field name="additional_fee"/>
-                                <field name="total_price" firce_save="1"/>
+                                <field name="total_price" force_save="1"/>
                             </group>
                         </group>
                         <notebook>
