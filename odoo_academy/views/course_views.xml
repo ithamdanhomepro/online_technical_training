@@ -32,7 +32,7 @@
                 <tree string="Course List">
                     <field name="name"/>
                     <field name="description"/>
-                    <field name="level"/
+                    <field name="level"/>
                 </tree>
             </field>
         </record>
