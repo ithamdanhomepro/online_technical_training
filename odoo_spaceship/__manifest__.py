@@ -17,7 +17,7 @@
     
     'depends': ['base'],
     
-    'data: [
+    'data': [
     
     
     ],

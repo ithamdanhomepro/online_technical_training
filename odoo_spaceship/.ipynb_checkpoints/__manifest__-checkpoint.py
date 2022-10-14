@@ -4,7 +4,7 @@
     'summary': """Exploration app to manage Spaceship""",
     
     'description': """
-        App Module to manage Spaceship Exploration
+        App Module to manage Spaceship Exploration To Moon
         -Spaceship
     """,
     
@@ -17,7 +17,7 @@
     
     'depends': ['base'],
     
-    'data: [
+    'data': [
     
     
     ],
