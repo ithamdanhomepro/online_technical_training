@@ -4,19 +4,19 @@
         <record model="academy.spaceship" id="spaceship_m-1">
             <field name="name">Spaceship M-1</field>
             <field name="description">Rocket Short Range</field>
-            <field name="fuel_type">Nitrogen</field>
+            <field name="no_passengers">5</field>
         </record>
 
         <record model="academy.spaceship" id="capsule_C-3">
             <field name="name">Capsule C-3</field>
             <field name="description">Capsule Satellite</field>
-            <field name="fuel_type">Nitrogen</field>
+            <field name="no_passengers">2</field>
         </record>
         
         <record model="academy.spaceship" id="spaceship_m-13">
             <field name="name">Apollo M13</field>
             <field name="description">Rocket Long Range</field>
-            <field name="fuel_type">Nitrogen</field>
+            <field name="no_passengers">5</field>
         </record>
     </data>
 </odoo>
