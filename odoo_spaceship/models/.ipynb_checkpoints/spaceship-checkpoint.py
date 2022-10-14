@@ -15,7 +15,7 @@ class Spaceship(models.Model):
     
     fuel_type = fields.Text(string='Fuel Type', default='Nitrogen', readonly=True)
     
-    ship_type = fields.selection(string='Ship Type',
+    ship_type = fields.Selection(string='Ship Type',
                                 selection=[('rocket','Rocket'),
                                            ('capsule', 'Capsule')],
                                 copy=False)
