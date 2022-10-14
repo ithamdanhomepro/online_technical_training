@@ -19,12 +19,12 @@
                   name="Odoo Spaceship"
                   parent="menu_spaceship"
                   sequence="2"/>
-        <menuitem id="menu_spaceship_sub"
+        <menuitem id="menu_spaceship_explore_sub"
                   name="Odoo Spaceship Explore"
-                  parent="menu_spaceship"
+                  parent="menu_spaceship_sub"
                   sequence="3"/>
-        <menuitem id="menu_academy_spaceship"
-                  name="Spaceship"
+        <menuitem id="menu_spaceship_trips"
+                  name="Spaceship Trips"
                   parent="menu_spaceship_sub"
                   sequence="4"
                   action="spaceship_list_action"/>        
