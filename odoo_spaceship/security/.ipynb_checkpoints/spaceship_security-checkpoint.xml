@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="group_academy_admin" model="res.groups">
-        <field name="name">Academy / Admin</field>
+    <record id="group_spaceship_admin" model="res.groups">
+        <field name="name">Spaceship / Admin</field>
     </record>
     
     <record  id="only_active_modify" model="ir.rule">

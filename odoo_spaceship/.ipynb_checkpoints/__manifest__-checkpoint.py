@@ -18,7 +18,8 @@
     'depends': ['base'],
     
     'data': [
-    
+        'security/spaceship_security.xml',
+        'security/ir.model.access.csv'
     
     ],
     

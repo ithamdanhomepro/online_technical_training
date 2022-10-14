@@ -1,3 +1,3 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-spaship_admin,spacesjip admin,model_academy_spaceship,group_academy_admin,1,1,1,1
+spaship_admin,spaceship admin,model_academy_spaceship,group_spaceship_admin,1,1,1,1
 spaceship_read_all,spaceship read all,model_academy_spaceship,,1,0,0,0
