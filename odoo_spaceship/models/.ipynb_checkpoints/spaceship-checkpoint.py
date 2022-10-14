@@ -24,7 +24,7 @@ class Spaceship(models.Model):
     
     active = fields.Boolean(string='Active', default=True)
     
-    @api.constrans('ship_length', 'ship_width')
+    @api.constrains('ship_length', 'ship_width')
     def _check_ship_width(self):
         for record in self:
             if record.ship_width > record.ship_length:
