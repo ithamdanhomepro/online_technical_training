@@ -24,7 +24,7 @@
     ],
     
     'demo': [
-        
+       'demo/spaceship_demo.xml', 
     ],
     
     #Add license to remove License Warning
