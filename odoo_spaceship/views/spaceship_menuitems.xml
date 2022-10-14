@@ -12,22 +12,10 @@
             </field>
         </record>
         
-        <menuitem name="Odoo Spaceship"
-                  id="menu_spaceship"
-                  sequence="1"/>
-        <menuitem id="menu_spaceship_sub"
-                  name="Odoo Spaceship Search"
-                  parent="menu_spaceship"
-                  sequence="2"/>
-        <menuitem id="menu_spaceship_explore_sub"
-                  name="Odoo Spaceship Explore"
-                  parent="menu_spaceship"
-                  sequence="3"/>
-        <menuitem id="menu_spaceship_trips"
-                  name="Spaceship Trips"
-                  parent="menu_spaceship"
-                  sequence="4"
-                  action="spaceship_list_action"/>        
+        <menuitem name="Odoo Spaceship" id="menu_spaceship" sequence="1"/>
+           <menuitem id="menu_spaceship_sub" name="Odoo Spaceship Search" parent="menu_spaceship" sequence="1"/>
+           <menuitem id="menu_spaceship_explore_sub" name="Odoo Spaceship Explore" parent="menu_spaceship" sequence="2"/>
+           <menuitem id="menu_spaceship_trips" name="Spaceship Trips" parent="menu_spaceship" sequence="3" action="spaceship_list_action"/>        
         
     </data>
     
