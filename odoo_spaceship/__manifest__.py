@@ -21,7 +21,7 @@
         'security/spaceship_security.xml',
         'security/ir.model.access.csv',
         'views/spaceship_menuitems.xml',
-        'view/spaceship_view.xml',
+        'views/spaceship_view.xml',
     
     ],
     
