@@ -23,7 +23,7 @@
                             <page string="Description">
                                 <field name="description"/>
                             </page>
-                            <page String="Sessions">
+                            <page string="Sessions">
                                 <field name="session_ids"/>
                             </page>
                         </notebook>
