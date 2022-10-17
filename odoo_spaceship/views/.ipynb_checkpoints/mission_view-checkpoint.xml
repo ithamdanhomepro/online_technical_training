@@ -3,23 +3,25 @@
     <data>
         <record model="ir.ui.view" id="misison_view_form">
             <field name="name">academy.mission.form</field>
-            <field name="model">cademy.mission</field>
+            <field name="model">academy.mission</field>
             <field name="arch" type="xml">
                 <form string="Mission Form">
                     <sheet>
                         <h1><field name="name"/></h1>
-                        <group>
-                            <field name="spaceship_id"/>
-                        </group>
-                        <group>
-                            <field name="launch_date"/>
-                            <field name="return_date"/>
-                        </group>
-                        <notebook>
-                            <page>
-                                <field name="crewmember_ids"/>
-                            </page>
-                        </notebook>
+                            <group>
+                                <group>
+                                    <field name="spaceship_id"/>
+                                </group>
+                                <group>
+                                    <field name="launch_date"/>
+                                    <field name="return_date"/>
+                                </group>
+                                <notebook>
+                                    <page string="Crew Members">
+                                        <field name="crewmember_ids"/>
+                                    </page>
+                                </notebook>
+                            </group>
                     </sheet>
                 </form>
             </field>

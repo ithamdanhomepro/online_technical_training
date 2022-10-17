@@ -25,6 +25,9 @@
                             <page string="Description">
                                 <field name="description"/>
                             </page>
+                            <page string="Missions">
+                                <field name="mession_ids"/>
+                            </page>
                         </notebook>
                     </sheet>
                 </form>

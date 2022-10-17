@@ -26,7 +26,7 @@
                                 <field name="description"/>
                             </page>
                             <page string="Missions">
-                                <field name="mission_ids"/>
+                                <field name="mession_ids"/>
                             </page>
                         </notebook>
                     </sheet>
