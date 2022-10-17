@@ -16,7 +16,7 @@
         <menuitem name="Odoo Spaceship" id="menu_spaceship_sub"  parent="menu_spaceship" sequence="2"/>
         <menuitem name="Spaceship Explore" id="menu_spaceship_explore" parent="menu_spaceship_sub" sequence="3" action="spaceship_list_action"/>
         <menuitem name="Spaceship Training" id="menu_spaceship_training" parent="menu_spaceship_sub" sequence="4" action="spaceship_list_action"/>
-        <menuitem name="Mission on Spaceships" id="menu_misions" parent="menu_spaceship_sub" sequence="5" action="mission_list_action"/>
+        <menuitem name="Mission on Spaceships" id="menu_missions" parent="menu_spaceship_sub" sequence="5" action="mission_list_action"/>
         
     </data>
     
