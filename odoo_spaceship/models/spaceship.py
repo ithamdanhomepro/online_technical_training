@@ -24,6 +24,11 @@ class Spaceship(models.Model):
     
     active = fields.Boolean(string='Active', default=True)
     
+    #need to create a one2many relation with mission
+    mession_ids = fields.One2many(comodel_name='academy.mission', 
+                                  inverse_name='spaceship_id',
+                                  string='Missions')
+    
     @api.constrains('ship_length', 'ship_width')
     def _check_ship_width(self):
         for record in self:
