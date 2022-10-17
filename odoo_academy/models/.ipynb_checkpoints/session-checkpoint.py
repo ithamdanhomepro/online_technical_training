@@ -1,5 +1,5 @@
 
-from odoo import model, fields, api
+from odoo import models, fields, api
 
 class Session(model.Model):
     _name = 'academy.session'
