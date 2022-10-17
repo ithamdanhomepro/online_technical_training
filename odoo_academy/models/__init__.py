@@ -1,3 +1,3 @@
 
 from . import course
-from . import sessions
+from . import session
