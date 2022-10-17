@@ -20,6 +20,6 @@ class Session(models.Model):
     #Odoo has res.Partner in the base model that Odoo automatically installs
     instructor_id = fields.Many2one(comodel_name='res.partner', string='Instructor')
     
-    student_ids = fields.Many2many(comodel_name='res,partner', string='Students')
+    student_ids = fields.Many2many(comodel_name='res.partner', string='Students')
     
     
