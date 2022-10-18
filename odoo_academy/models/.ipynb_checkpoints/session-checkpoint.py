@@ -23,12 +23,12 @@ class Session(models.Model):
     
     student_ids = fields.Many2many(comodel_name='res.partner', string='Students')
     
-    start_date = field.Date(string="Start Date", default=field.Date.today)
+    start_date = fields.Date(string="Start Date", default=fields.Date.today)
 
-    duration = field.Intgeger(string="Session Days", default=1)
+    duration = fields.Integer(string="Session Days", default=1)
 
     #use a computed field
-    end_date = field.Date(string="End Date", 
+    end_date = fields.Date(string="End Date", 
                           compute='_compute_end_date',
                           inverse='_inverse_end_date', 
                           store=True)
@@ -41,7 +41,7 @@ class Session(models.Model):
                 record.end_date = record.start_date
             else:
                 duration = timedelta(days=record.duration)
-                recrod.end_date = record.start_date + duration
+                record.end_date = record.start_date + duration
                 
     def _inverse_end_date(self):
         for record in self:
