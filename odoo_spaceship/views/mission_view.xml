@@ -32,11 +32,10 @@
             </field>
         </record>
         <record model="ir.ui.view" id="spaceship_view_graph">
-            <field name="name">academy.spaceship.graph</field>
-            <field name="model">academy.spaceship</field>
+            <field name="name">academy.mission.graph</field>
+            <field name="model">academy.mission</field>
             <field name="arch" type="xml">
-                <graph>
-                    <field name="title" type="row"/>
+                <graph type="bar" string="Mission Calculated Graph">
                     <field name="name" type="row"/>
                     <field name="fuel_amount" type="measure"/>
                     <field name="engine_count" type="col"/>
