@@ -20,5 +20,8 @@ class Mission(models.Model):
     launch_date = fields.Date(string='Launch Date')
     return_date = fields.Date(string='Return Date')
     
+    fuel_amount = fields.Float(string='Amount of Fuel')
+    engine_count = fields.Integer(string='Number of Engines')
+    Safety_features = fields.Text(string='Safety Features')
     
     

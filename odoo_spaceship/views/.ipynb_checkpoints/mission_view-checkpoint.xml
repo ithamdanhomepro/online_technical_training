@@ -16,6 +16,11 @@
                                     <field name="launch_date"/>
                                     <field name="return_date"/>
                                 </group>
+                                <group>
+                                    <field name="fuel_amount"/>
+                                    <field name="engine_count"/>
+                                    <field name="Safety_features"/>
+                                </group>
                                 <notebook>
                                     <page string="Crew Members">
                                         <field name="crewmember_ids"/>
@@ -24,6 +29,18 @@
                             </group>
                     </sheet>
                 </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="course_view_graph">
+            <field name="name">academy.mission.graph</field>
+            <field name="model">academy.mission</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="title" type="row"/>
+                    <field name="name" type="row"/>
+                    <field name="fuel_amount" type="measure"/>
+                    <field name="engine_count" type="col"/>
+                </graph>
             </field>
         </record>
  
