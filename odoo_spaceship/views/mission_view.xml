@@ -31,9 +31,9 @@
                 </form>
             </field>
         </record>
-        <record model="ir.ui.view" id="course_view_graph">
-            <field name="name">academy.mission.graph</field>
-            <field name="model">academy.mission</field>
+        <record model="ir.ui.view" id="spaceship_view_graph">
+            <field name="name">academy.spaceship.graph</field>
+            <field name="model">academy.spaceship</field>
             <field name="arch" type="xml">
                 <graph>
                     <field name="title" type="row"/>
@@ -43,6 +43,5 @@
                 </graph>
             </field>
         </record>
- 
     </data>
 </odoo>
