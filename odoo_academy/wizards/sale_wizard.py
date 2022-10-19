@@ -1,5 +1,6 @@
 
 from odoo import models, fields, api
+from odoo.exceptions import UserError
 
 class SaleWizard(models.TransientModel):
     _name= 'academy.sale.wizard'
@@ -24,12 +25,14 @@ class SaleWizard(models.TransientModel):
     
     def create_sale_order(self):
         
-        session_product_id = self.env['product.product'].search([('is_session_product', '=', True)], limit=1)
+        session_product_id = self.env['product.product'].search([('is_session_product', '=', True)], limit = 1)
         if session_product_id:
             for student in self.student_ids:
                 order_id = self.env['sale.order'].create({
-                    #create and order
+                    #create an order
                     'partner_id': student.id,
-                    'session_id': self.session.id,
+                    'session_id': self.session_id.id,
                     'order_line': [(0,0, {'product_id': session_product_id.id, 'price_unit': self.session_id.total_price})]
                 })
+        else:
+            raise UserError('No session product id present.')
