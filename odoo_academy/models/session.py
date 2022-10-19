@@ -23,15 +23,26 @@ class Session(models.Model):
     
     student_ids = fields.Many2many(comodel_name='res.partner', string='Students')
     
-    start_date = fields.Date(string="Start Date", default=fields.Date.today)
+    start_date = fields.Date(string='"Start Date', default=fields.Date.today)
 
-    duration = fields.Integer(string="Session Days", default=1)
+    duration = fields.Integer(string='Session Days', default=1)
 
     #use a computed field
-    end_date = fields.Date(string="End Date", 
+    end_date = fields.Date(string='End Date', 
                           compute='_compute_end_date',
                           inverse='_inverse_end_date', 
                           store=True)
+    
+    state = fields.Selection(string='"States',
+                             selection=[('draft', 'Draft'),
+                                        ('open', 'In Progress'),
+                                        ('done', 'Done'),
+                                        ('cancelled', 'Cancelled')],
+                             default='draft',
+                             require=True)
+    
+    total_price = fields.Float(string='Total Price',
+                               related='course_id.total_price')
     
     
     @api.depends('start_date', 'duration')
