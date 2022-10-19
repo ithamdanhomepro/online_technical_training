@@ -43,7 +43,7 @@ class Session(models.Model):
                 duration = timedelta(days=record.duration)
                 record.end_date = record.start_date + duration
                 
-     @api.onchange('end_date')
+    @api.onchange('end_date')
     def _inverse_end_date(self):
         for record in self:
             if record.start_date and record.end_date:

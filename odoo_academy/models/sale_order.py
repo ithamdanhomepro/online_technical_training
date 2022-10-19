@@ -1,8 +1,8 @@
 
 from odoo import models, fields, api
 
-class Saleorder(models.Model):
-    _inheret = 'sale.order'
+class SaleOrder(models.Model):
+    _inheret = 'sale.order' 
     
     session_id = fields.Many2one(comodel_name='academy.session',
                                  string='Related Session',
