@@ -8,4 +8,3 @@ class ProductTemplate(models.Model):
                                         help='Check this box to use this as Product for Session Fee',
                                         default=False)
     
-    
