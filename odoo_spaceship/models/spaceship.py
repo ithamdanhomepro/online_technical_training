@@ -1,36 +1,40 @@
-from odoo import models, fields, api
-from odoo.exceptions import UserError, ValidationError
+from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 class Spaceship(models.Model):
+
+    _name = 'space_mission.spaceship'
+    _inherit = ['image.mixin']
+    _description = "Space Mission Spaceship"
     
-    _name = 'academy.spaceship'
-    _description = 'Spaceship Info'
-    
-    name = fields.Char(string='Title', required=True)
-    description = fields.Text(string='Description')
-    
-    ship_length = fields.Float(string='Ship Length')
-    ship_width = fields.Float(string='Ship Width')
-    ship_height = fields.Float(string='Ship Height')
-    
-    fuel_type = fields.Text(string='Fuel Type', default='Nitrogen', readonly=True)
-    
-    ship_type = fields.Selection(string='Ship Type',
-                                selection=[('rocket','Rocket'),
-                                           ('capsule', 'Capsule')],
-                                copy=False)
-    
-    no_passengers = fields.Integer(string='Number of Passengers', default=1)
-    
-    active = fields.Boolean(string='Active', default=True)
-    
-    #need to create a one2many relation with mission
-    mession_ids = fields.One2many(comodel_name='academy.mission', 
-                                  inverse_name='spaceship_id',
-                                  string='Missions')
-    
-    @api.constrains('ship_length', 'ship_width')
-    def _check_ship_width(self):
+    #Fields definition
+    name = fields.Char(string='Vessel Name')
+    active = fields.Boolean(default=True)    
+    type = fields.Selection(selection=[('freighter','Freighter'),
+                                       ('star_destroyer', 'Star Destroyer'),
+                                       ('star_cruiser', 'Star Cruiser'),
+                                       ('x_wing', 'X-Wing Fighter')],
+                            string='Ship Type',)
+    model = fields.Char(string='Ship Model', 
+                        required = True)
+    crew_capacity = fields.Integer(string= "Number of Passengers",
+                                        help="Maximum number of passengers in the Spaceship",)
+    length = fields.Float(help="Length of the Ship",)
+    width = fields.Float(help="Width of the Ship",)
+    height = fields.Float(help="Height of the Ship",)
+    weight = fields.Float(string="Empty Weight",
+                                        help="Weight of the ship without fuel, passengers or cargo",)
+    fuel_type = fields.Selection(selection=[('solid_fuel','Solid Fuel'),
+                                            ('liquid_fuel', 'Liquid Fuel')],
+                                 string='Fuel Type',)
+    #Add Crew members to vessel
+    crew_ids = fields.Many2many(comodel_name='res.partner',
+                            string='Crew')
+    mission_ids = fields.One2many(comodel_name='space_mission.mission',
+                               inverse_name='spaceship_id')
+            
+    @api.constrains('width','length')
+    def _check_width_less_length(self):
         for record in self:
-            if record.ship_width > record.ship_length:
-                raise ValidationError('Width can not be longer than height')
+            if record.width > record.length:
+                raise ValidationError(('Hey! The width can not be bigger than the length.')) 
