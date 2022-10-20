@@ -1,8 +1,5 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_spaceship_admin,spaceship admin,space_mission.model_space_mission_spaceship,space_mission_admin,1,1,1,1
-access_spaceship_crew,spaceship crew,space_mission.model_space_mission_spaceship,space_mission_crew,1,1,1,0
-access_spaceship_general,spaceship general,space_mission.model_space_mission_spaceship,space_mission_general,1,0,0,0
-access_mission_admin,mission admin,space_mission.model_space_mission_mission,space_mission_admin,1,1,1,1
-access_mission_crew,mission crew,space_mission.model_space_mission_mission,space_mission_crew,1,1,1,0
-access_mission_general,mission general,space_mission.model_space_mission_mission,space_mission_general,1,0,0,0
-space_mission.access_space_mission_project_wizard,access_space_mission_project_wizard,space_mission.model_space_mission_project_wizard,space_mission_admin,1,1,1,1
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+spaship_admin,spaceship admin,model_academy_spaceship,group_spaceship_admin,1,1,1,1
+spaceship_read_all,spaceship read all,model_academy_spaceship,,1,0,0,0
+mession_admin,mission admin,model_academy_mission,group_spaceship_admin,1,1,1,1
+mission_read_all,mission read all,model_academy_spaceship,,1,0,0,0
