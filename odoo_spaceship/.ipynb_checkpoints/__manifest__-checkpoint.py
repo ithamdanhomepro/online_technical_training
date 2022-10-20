@@ -1,35 +1,35 @@
 {
-    'name': 'Odoo Spaceship',
-    
-    'summary': """Exploration app to manage Spaceship""",
-    
+    'name': 'Space Mission',
+    'version': '0.6',
+    'summary': 'Odoo Application to control its Space Mission',
     'description': """
-        App Module to manage Spaceship Exploration To Moon
-        -Spaceship
-    """,
+        Space Mission Application to Manage Space Control:
+            -
+            -
+            -
+        """,
+    'license': 'OPL-1',
+    'author': 'fsrs-odoo',
+    'website': 'www.odoo.com',
+    'category': 'Tech Training',
     
-    'author': 'Issam',
-    
-    'website': 'http://www.odoo.com',
-    
-    'category': 'Exploration',
-    'varsion': '0.1',
-    
-    'depends': ['base'],
-    
+    'depends': ['project'],
     'data': [
-        'security/spaceship_security.xml',
+        'security/space_mission_groups.xml',
+        'security/space_mission_security.xml',
         'security/ir.model.access.csv',
-        'views/spaceship_menuitems.xml',
+        'views/space_mission_menuitems.xml',
         'views/spaceship_view.xml',
         'views/mission_view.xml',
-    
+        'views/project_views_inherit.xml',
+        'wizard/project_wizard.xml',
     ],
+    'demo': ['demo/spaceship_demo.xml',],
     
-    'demo': [
-       'demo/spaceship_demo.xml', 
-    ],
+    'assets': {},
     
-    #Add license to remove License Warning
-    'license': 'OPL-1'
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    
 }
