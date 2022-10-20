@@ -7,7 +7,7 @@ class SaleWizard(models.TransientModel):
     _description = 'Wizard: Quck Sale Orders for Session Students'
     
     def _default_session(self):
-        return self.env['academy.session'],browse(self._context.get('active_id'))
+        return self.env['academy.session'].browse(self._context.get('active_id'))
     
     
     session_id = fields.Many2one(comodel_name='academy.session',
