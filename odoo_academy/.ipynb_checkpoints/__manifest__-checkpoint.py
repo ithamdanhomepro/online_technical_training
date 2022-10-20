@@ -19,7 +19,8 @@
      'category': 'Training',
      'version' : '0.2',
      
-     'depends': ['sale_management'],
+    #in V15 change sale to sale_management
+     'depends': ['sale_management','website'],
      
      'data': [
         'security/academy_security.xml',
