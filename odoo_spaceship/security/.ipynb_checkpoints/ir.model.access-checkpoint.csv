@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+spaship_admin,spaceship admin,model_academy_spaceship,group_spaceship_admin,1,1,1,1
+spaceship_read_all,spaceship read all,model_academy_spaceship,,1,0,0,0
+mession_admin,mission admin,model_academy_mission,group_spaceship_admin,1,1,1,1
+mission_read_all,mission read all,model_academy_spaceship,,1,0,0,0
