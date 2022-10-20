@@ -13,11 +13,11 @@ class SaleWizard(models.TransientModel):
     session_id = fields.Many2one(comodel_name='academy.session',
                                  string='Session',
                                  required=True,
-                                 default=default_session)
+                                 default=_default_session)
     
     session_student_ids = fields.Many2many(comodel_name='res.partner',
                                            string='Students in Current Session',
-                                           related='sesison_id.student_ids',
+                                           related='session_id.student_ids',
                                            help='Those are the students currently in the Session')
     
     student_ids = fields.Many2many(comodel_name='res.partenr',
