@@ -1,6 +1,6 @@
 
 from odoo import models, fields, api
-from odoo.exceptions import UserError
+from odoo.exceptions import ValidationError
 
 class SaleWizard(models.TransientModel):
     _name= 'academy.sale.wizard'
@@ -35,4 +35,4 @@ class SaleWizard(models.TransientModel):
                     'order_line': [(0,0, {'product_id': session_product_id.id, 'price_unit': self.session_id.total_price})]
                 })
         else:
-            raise UserError('No session product id present.')
+            raise ValidationError('No session product id present.')
