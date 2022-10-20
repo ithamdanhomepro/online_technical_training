@@ -15,8 +15,7 @@
     
     'depends': ['project'],
     'data': [
-        'security/space_mission_groups.xml',
-        'security/space_mission_security.xml',
+        'security/spaceship_security.xml',
         'security/ir.model.access.csv',
         'views/space_mission_menuitems.xml',
         'views/spaceship_view.xml',
